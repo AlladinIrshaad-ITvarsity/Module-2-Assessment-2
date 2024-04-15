@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4{
+    line-height: 1.1;
+}
+/************************* Navbar *****************************/
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to bottom, #000000, #bdbbbb);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items to the right */
+}
+
+#navbar img {
+    height: 85px;
+    margin-left: 20px;
+    padding-bottom: 0;
+    width: 20%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-right: 40px; /* Add right margin to push the list items away from the image */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 20px; /* Add left margin to the first list item */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjust padding for larger hover box */
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+nav ul li a:hover {
+    color: #D99AA5;
+}
+
+/************************* Main *****************************/
+#main-home {
+    margin-top: 90px;
+    height: fit-content;
+    position: relative; 
+}
+
+/************************* section *****************************/
+.section {
+    /* max-width: 60rem; */
+    margin: 2rem 0;
+    display: grid;
+    place-items: center;
+    color: #333;
+    padding: 30px 1em;
+}
+
+.section p {
+    text-align: center; 
+    font-size: large;
+}
+ 
+.button {
+    background-color: #ddd;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    border: 1px solid black; /* Add border to the button */
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+  
+.button:hover {
+    background-color: #D99AA5; /* Change the background color on hover */
+}
+
+.social-icons {
+    display: inline-block; 
+}
+
+.social-icons i {
+    margin: 0 20px; /
+}
+
+.social-icons .fa:hover {
+    color: #D99AA5; /* Change to your desired hover color */
+}
+
+/************************* special offers *****************************/
+.special-offers-container {
+    text-align: center; /* Center-align the content */
+    background-color: #f0eded;
+    padding: 4rem 0;
+    font-size: large;
+  }
+  
+  .special-offers-heading {
+    font-size: 1.5rem;
+    margin-top: 5px;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the images */
+  }
+  
+  .responsive {
+    padding: 10px;
+    width: calc(33.33% - 20px); /* Adjusted width to make 3 images closer */
+    margin: 1%; /* Adjusted margin */
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .gallery {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease;
+  }
+  
+  .gallery:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .desc {
+    padding: 10px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+  
+/************************* Trading hours *****************************/
+.container-contact {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .container-contact img {
+    display: block;
+    width: 100%;
+
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%; /* Adjusted to center vertically */
+    left: 60%; /* Adjusted to align with left edge */
+    transform: translate(-50%, -50%);
+    text-align: left; /* Adjusted alignment */
+    color: #333;
+  }
+  
+  .text-overlay h2 {
+    font-size: 24px;
+  }
+
+  .text-overlay table {
+    width: 100%; /* Ensure table takes full width */
+  }
+  
+  .text-overlay td {
+    padding-bottom: 20px; /* Adjust as needed */
+  }
+  
+/************************* Footer *****************************/
+footer {
+    background-image: linear-gradient(to top, #000000, #bdbbbb);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+}
+
+/************************* about us*****************************/
+.container {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  
+  .about-container {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .gallery-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Style for individual gallery images */
+  .gallery-container img {
+    width: calc(44.33% - 20px);
+    margin: 10px;
+  }
+  
+  .about-heading{
+    font-size: 2rem;
+  }
+  /************************* contact*****************************/
+  /* #contact-image{
+    margin: 90px 0;
+  } */
+
+  /************************* contact*****************************/
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between; /* Items spaced apart */
+    max-width: 1400px; /* Adjust max width as needed */
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.contact-container {
+    flex: 1; /* Grow to fill available space */
+}
+
+.contact-info, .contact-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #57595a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #D99AA5;
+}
+
+.contact-image {
+    flex: 1; /* Grow to fill available space */
+    margin-left: 10px; /* Add some space between contact and image */
+    margin: 20px auto;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+  
+ /************************* shops *****************************/
+ .shop-heading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shop-categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.shop-category {
+    margin: 0 20px;
+}
+
+.shop-category-item {
+    width: 300px;
+    height: 150px;
+    border-radius: 10%;
+    background-color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+}
+
+.shop-category-item:hover {
+    background-color: #D99AA5; /* Change background color on hover */
+}
+
+.shop-category-item h2 {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.shop-category-item h2 a {
+    color: #ffffff; /* Set text color for the link */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+/************************* books *****************************/
+.shop-list table {
+    width: 80%;
+    margin: 50px auto; /* Center the table horizontally */
+    border-collapse: collapse;
+}
+
+.shop-list th, .shop-list td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.shop-list th {
+    background-color: #f2f2f2;
+}
+
+.shop-list img {
+    max-width: 100px;
+    height: auto;
+}
+
+.shop-list button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.shop-list button:hover {
+    background-color: #D99AA5;
+}
+
+/************************* exclusive books *****************************/
+.excl-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 50px 200px; /* Add margin top and bottom */
+}
+
+.logo-column {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-column img {
+  max-width: 350px; /* Adjust the maximum width of the logo */
+}
+
+.info-column {
+  flex: 2; /* Increase the width of the info column */
+  padding: 0 20px;
+}
+
+.info-column h1 {
+  margin-top: 0;
+}
+
+/************************* Movies *****************************/
+.title-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.page-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.movie-card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #444; /* dark grey */
+  color: white;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* Set a fixed height for all movie cards */
+}
+
+.movie-card:hover {
+  background-color: #333; /* darker grey on hover */
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movie-link {
+  text-decoration: none; /* remove underline from hyperlinks */
+}
+
+.movie-title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.actors, .age-restriction {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+
+/************************* Movie page *****************************/
+.movies-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.movie-details {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.poster {
+  flex: 0 0 30%;
+  margin-right: 20px;
+}
+
+.poster img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.info {
+  flex: 1;
+}
+
+.movie-title {
+  font-size: 24px;
+}
+
+.synopsis {
+  margin-top: 10px;
+}
+
+.showing-times {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.showing-times h2 {
+  margin-bottom: 5px;
+}
+
+.showing-times ul {
+  list-style: none;
+  padding: 0;
+}
+
+.showing-times li {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
